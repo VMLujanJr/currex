@@ -1,0 +1,16 @@
+:root {
+    /* Declare variables here */
+    --primaryColor: #ffffff; 
+    --secondaryColor: #000000;
+
+    /* Call variables using 'var(--primaryColor)' will return white */
+}
+
+* {
+    /* Universal Selector properties */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--secondaryColor); /* example; will return black */
+}
