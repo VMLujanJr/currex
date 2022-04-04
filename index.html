@@ -16,25 +16,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="./assets/js/script.js"></script> <!-- script is 'deferred'; it will be read last -->
 </head>
-<body class="flex flex-col bg-slate-600">
+<body class="flex flex-col w-100 h-screen bg-cover bg-center" style="background-image: url('assets/images/bg-img.jpeg')">
 
     <!-- Add your HTML here -->
-    <header class="flex flex-col py-5 bg-zinc-200">
+    <header class="flex flex-col py-5 bg-gradient-to-l from-emerald-500 via-purple-300 to-sky-400">
         <div class="flex justify-center mb-6">
             <a href="/" class="text-center w-80 text-7xl md:text-7xl font-bold text-stone-100 bg-slate-900 rounded p-4">CURREX</a>
         </div>
-        <ul class="hidden md:flex flex-row justify-around">
+        <ul class="hidden md:flex flex-row justify-around bg-gradient-to-r from-cyan-500 to-blue-500 overflow-hidden">
             <li><a href="#" class="text-center w-80 text-xl md:text-2xl font-bold text-stone-100 bg-slate-900 rounded-full p-4">Home</a></li>
             <li><a href="#" class="text-center w-80 text-xl md:text-2xl font-bold text-stone-100 bg-slate-900 rounded-full p-4">About</a></li>
             <li><a href="#" class="text-center w-80 text-xl md:text-2xl font-bold text-stone-100 bg-slate-900 rounded-full p-4">Contact</a></li>
         </ul>
     </header>
 
-    <section class="">
-        <img>
-    </section>
-
-    <main class="flex flex-col p-5 bg-stone-700 rounded w-5/6 mx-auto mt-5">
+    <main class="flex flex-col p-5 bg-stone-700 bg-opacity-80 rounded w-5/6 mx-auto my-auto">
         <section class="text-xl text-stone-100">
             <a href="/convert/" class="flex gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -51,18 +47,21 @@
             <div class="">
                 <h2 class="text-4xl">From</h2>
                 <select class="select-dropdown text-slate-900 w-80">
-                    <option>Select Currency</option>
+                    <option value="" disabled selected>Select Currency</option>
+                    <option value="Chores">Chores</option>
+                    <option value="Errands">Errands</option>
+                    <option value="Groceries">Groceries</option>
                 </select>
             </div>
             <button class="">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 rounded-full ring-2 ring-emerald-500" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M8 5a1 1 0 100 2h5.586l-1.293 1.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L13.586 5H8zM12 15a1 1 0 100-2H6.414l1.293-1.293a1 1 0 10-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L6.414 15H12z" />
                 </svg>
             </button>
             <div class="">
                 <h2 class="text-4xl">To</h2>
                 <select class="select-dropdown text-slate-900 w-80">
-                    <option>Select Currency</option>
+                    <option value="" disabled selected>Select Currency</option>
                 </select>
             </div>
         </form>
