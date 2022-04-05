@@ -14,6 +14,7 @@
     
     <!-- scripts go here; add 'defer' -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>     
     <script defer src="./assets/js/script.js"></script> <!-- script is 'deferred'; it will be read last -->
 </head>
 <body class="flex flex-col w-100 h-screen bg-cover bg-center" style="background-image: url('assets/images/bg-img.jpeg')">
@@ -39,14 +40,14 @@
                 </svg>
                 Convert</a>
         </section>
-        <form class="flex flex-col flex-wrap gap-10 text-xl text-stone-100 content-center items-center">
+        <form id="form" class="flex flex-col flex-wrap gap-10 text-xl text-stone-100 content-center items-center">
             <div class="">
                 <h2 class="text-center text-4xl">Amount</h2>
-                <input class="text-center text-slate-900 w-80" placeholder=" Enter Amount" />
+                <input id="amount" required type="number" class="text-center text-slate-900 w-80" placeholder=" Enter Amount" />
             </div>
             <div class="">
                 <h2 class="text-4xl text-center">From</h2>
-                <select class="select-dropdown text-center text-slate-900 w-80">
+                <select id="from" class="select-dropdown text-center text-slate-900 w-80">
                     <option value="" disabled selected>Select Currency</option>
                     <option value="Chores">Chores</option>
                     <option value="Errands">Errands</option>
@@ -60,7 +61,7 @@
             </button>
             <div class="">
                 <h2 class="text-4xl text-center">To</h2>
-                <select class="text-center select-dropdown text-slate-900 w-80">
+                <select id="to" class="text-center select-dropdown text-slate-900 w-80">
                     <option value="" disabled selected>Select Currency</option>
                 </select>
             </div>
