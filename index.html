@@ -19,22 +19,80 @@
 <body class="flex flex-col w-100 h-screen bg-cover bg-center" style="background-image: url('assets/images/bg-img.jpeg')">
     
     <!-- Homepage -->
-    <header class="flex flex-col mb-5 py-5">
-        <div class="flex justify-center mb-5">
-            <a href="/" class="text-center w-80 text-7xl md:text-7xl font-bold text-stone-100 bg-slate-900 rounded p-4">
-                CUR<span class="animate-pulse bg-clip-text text-transparent bg-gradient-to-l from-emerald-500 via-yellow-300 to-sky-400">REX</span>
+    <nav class="bg-slate-800 shadow-lg">
+        <div class="flex justify-between py-6">
+            <!--Website Logo-->
+
+            <div class="flex-end mb-2">
+                <a href="/" class="text-center w-80 text-7xl md:text-7xl font-bold text-stone-100 bg-slate-800 rounded p-4">
+                    CURR<span class="animate-pulse bg-clip-text text-transparent bg-gradient-to-l from-lime-600 via-yellow-300 to-red-600">EX</span>
+            <!--Navigation-->
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-1">
+             <a href="" 
+                class="py-2 px-2 text-stone-100 border-b-4 border-stone-100 font-semibold">
+                Home
+             <a href=""
+                class="py-2 px-2 text-stone-100 font-semibold hover:text-stone-100 transition duration-300">
+                About
+             </a>
+             <a href=""
+                class="py-2 px-2 text-stone-100 font-semibold hover:text-stone-100 transition duration-300">
+                Contact Us
+             </a>
+             <a href=""
+                class="py-2 px-2 text-stone-100 font-semibold hover:text-stone-100 transition duration-300">
+                CryptEX 
             </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button class="outline-none menu-button">
+                    <svg class="w-6 h-6 text-gray-500" x-show="! showMenu" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewBox="0 00 24 24" stroke="currentColor"><path d="m4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden mobile-menu">
+                <ul class="">
+                    <li class="active"> 
+                        <a href="nav.html"
+                        class="block text-sm px-2 py-4 text-white bg-stone-100 font-semibold">
+                        Home
+                    </li>
+                    <li>
+                        <a href="#About"
+                        class="block.text-sm.px-2.py-4 hover:bg-stone-100 transition duration-300">
+                        About
+                     </a>
+                    </li>
+                    <li>
+                        <a href="#Contact Us"
+                        class="block.text-sm.px-2.py-4 hover:bg-stone-100 transition duration-300">
+                        Contact Us
+                    </li>
+                    <li>
+                        <a href="#CryptEX"
+                        class="block.text-sm.px-2.px-4 hover:bg-stone-100 transition duration-300"></a>
+                        CryptEX
+                    </li>
+                </ul>
+            </div>    
+            <script>
+             const btn = document.querySelector('button.menu-button');
+             const menu = document.querySelector(".mobile-menu");
+             btn.addEventListener("click", () => {
+             menu.classList.toggle("hidden");
+             })
+            </script>
         </div>
-        <ul class="hidden sm:flex flex-row justify-around bg-gradient-to-l from-emerald-500 via-yellow-300 to-sky-400">
-            <li><a href="#" class="text-center w-80 text-xl md:text-2xl font-bold text-stone-100 bg-slate-900 rounded-full p-4">Home</a></li>
-            <li><a href="#" class="text-center w-80 text-xl md:text-2xl font-bold text-stone-100 bg-slate-900 rounded-full p-4">About</a></li>
-            <li><a href="#contact-us" class="text-center w-80 text-xl md:text-2xl font-bold text-stone-100 bg-slate-900 rounded-full p-4">Contact</a></li>
-        </ul>
-    </header>
+    </nav>
 
     <!-- Motto section -->
     <section class="flex flex-col mb-5 p-5 mx-auto">
-        <i class="text-2xl font-bold text-center text-slate-000 bg-slate-100 rounded-full px-5">...exchange rates; any place; anywhere...</i>
+        <i class="text-2xl font-bold text-center text-slate-000 bg-slate-200 rounded-full px-5">exchange rates; any place; any time</i>
     </section>
     
     <!-- Exchange Tool section -->
@@ -79,11 +137,10 @@
     </main>
 
     <!-- Contact Section -->
-    <section class="flex flex-col p-5 bg-slate-800 border-t rounded w-full">
-        <h2 class="text-5xl font-bold text-center text-yellow-400">Contact</h2>
-        <div class="text-xl text-center text-stone-100">
-            <h3>GitHub</h3>
-            <div class="flex justify-around">
+    <section class="flex flex-col p-5 bg-slate-800 border-t rounded w-full mt-auto">
+        <h2 class="text-5xl font-bold text-center text-yellow-400 mb-5">Contact</h2>
+        <div class="text-2xl font-bold text-stone-100">
+            <div class="flex-end flex justify-between">
                 <a href="https://github.com/joseph0edwards">Joseph Edwards</a>
                 <a href="https://github.com/Michael-Tulmen">Michael Tulmen</a>
                 <a href="https://github.com/VMLujanJr">Victor Lujan</a>
