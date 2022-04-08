@@ -162,17 +162,27 @@ let countryList = {
     "ZWD" : "ZW"
 }
 
-const dDM = document.querySelectorAll("form select"),
-fromValue = document.querySelector(".from select"),
-toValue = document.querySelector(".to select"),
-converterButton = document.querySelector("form button")
+var dDM = document.querySelectorAll("form select");
+var fromValue = document.querySelector(".from select");
+var toValue = document.querySelector(".to select");
+var converterButton = document.querySelector("form button");
+var exchangeRateTxt = document.querySelector(".exchange-rate");
+var amount = document.querySelector("#amount");
+
 
 for (let i = 0; i < dDM.length; i++) {
-    for(let currency_code in countryList) {
-        let selected = i == 0 ? currency_code == "USD" ? "selected" : "" : currency_code == "EUR" ? "selected" : "";
-        let optionTag = '<option value="${currency_code}" ${selected}>${currency code}</option>';
-        dDM[i].insertAdjacentHTML('beforeend', optionTag);
-    }
+    dDM[i].addEventListener("change", function(e) {
+        console.log("select", e.target.name);
+        console.log("selected", e.target.value);
+    });
+
+    // var selected = dDM[i].value;
+    // 
+    // for(let currency_code in countryList) {
+    //     let selected = i == 0 ? currency_code == "USD" : "selected" //: "" : currency_code == "EUR" ? "selected" : "";
+    //     let optionTag = `<option value="${currency_code}" ${selected}>${currency code}</option>`;
+    //     dDM[i].insertAdjacentHTML('beforeend', optionTag);
+    // }
 }
 
 window.addEventListener('load', ()=>{
@@ -182,27 +192,51 @@ converterButton.addEventListener('click', e =>{
     e.preventDefault();
     getExchangeRate();
 });
-function getExchangeRate(){
-    const amount = document.querySelector("form input");
-    const exchangeRateTxt = document.querySelector(".exchange-rate");
-    let amountVal = amount.value;
-    if(amountVal == "" || amountVal == "0"){
-        amount.value = "1";
-        amountVal = 1;
-    }
-    exchangeRateTxt.innerText = "Getting exchange rate...";
-    let url = 'https://data.fixer.io/api/latest?access_key=1fcd5517fe335c231a9a958b4169323c/${fromValue.value}';
-    fetch(url).then(response => response.json()).then(result =>{
-    let exchangeRate = result.conversion_rates[toValue.value];
-    let totalER = (amountVal * exchangeRate).toFixed(2);
-    exchangeRateTxt.innerText = '${amountVal} ${fromValue.value} = ${totalER} ${toValue.value}';
-    }).catch(() => {
-        exchangeRateTxt.innerText = "An Error Occured";
+
+function getExchangeRate() {
+    const curr1 = fromValue.value;
+    const curr2 = toValue.value;
+    const curr3 = amount.value;
+
+    fetch(`https://v6.exchangerate-api.com/v6/c84d27efabb475a411031ee2/latest/${curr1}`)
+    .then((result) => result.json())
+    .then((data) => {
+        //log data somehow
+        const rate = data.conversion_rates[curr2];
+        const convertedAmount = rate * curr3;
+        exchangeRateTxt.innerText =  `${curr3} ${curr1} = ${convertedAmount.toFixed(2)} ${curr2}`;
+
+
+        //let totalER = (amountVal * exchangeRate).toFixed(2);
     });
-
-
-
 }
+// // function getExchangeRate(){
+// //     var amount = document.querySelector("form input");
+
+// //     var exchangeRateTxt = document.querySelector(".exchange-rate");
+    
+// //     let amountVal = amount.value;
+    
+// //     if(amountVal == "" || amountVal == "0"){
+// //         amount.value = "1";
+// //         amountVal = 1;
+// //     }
+// //     exchangeRateTxt.innerText = "Getting exchange rate...";
+// //     let url = `https://v6.exchangerate-api.com/v6/c84d27efabb475a411031ee2/latest/`;
+// //     fetch(url).then(response => response.json()).then(result =>{
+// //     let exchangeRate = result.conversion_rates[toValue.value];
+// //     let totalER = (amountVal * exchangeRate).toFixed(2);
+// //     exchangeRateTxt.innerText = `${toValue}`;
+// //     })
+    
+    
+// //     .catch(() => {
+// //         exchangeRateTxt.innerText = "An Error Occured";
+// //     });
+
+
+
+// }
 tailwind.config = {
     theme: {
       extend: {

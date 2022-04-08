@@ -43,11 +43,11 @@
         <form id="form" class="flex flex-col flex-wrap gap-10 text-xl text-stone-100 content-center items-center">
             <div class="">
                 <h2 class="text-center text-4xl">Amount</h2>
-                <input id="amount" required type="number" class="text-center text-slate-900 w-80" placeholder=" Enter Amount" />
+                <input id='amount' required type="number" class="text-center text-slate-900 w-80" placeholder=" Enter Amount" />
             </div>
             <div class="from">
                 <h2 class="text-4xl text-center">From</h2>
-                <select class="select-dropdown text-center text-slate-900 w-80">
+                <select class="select-dropdown text-center text-slate-900 w-80" name="from-currency">
                     <option value="" disabled selected>Select Currency</option>
                     <option value="AED">AED</option>
                     <option value="AFN">AFN</option>
@@ -217,8 +217,8 @@
             </button>
             <div class="to">
                 <h2 class="text-4xl text-center">To</h2>
-                <select class="text-center select-dropdown text-slate-900 w-80 to">
-                    <option value="" disabled selected>Select Currency</option>
+                <select class="text-center select-dropdown text-slate-900 w-80 to" name="to-currency">
+                    <option value="">Select Currency</option>
                     <option value="AED">AED</option>
                     <option value="AFN">AFN</option>
                     <option value="XCD">XCD</option>
