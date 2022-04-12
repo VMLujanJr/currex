@@ -1,5 +1,5 @@
 
-
+//country code list to tie in to currencies
 let countryList = {
     "AED" : "AE",
     "AFN" : "AF",
@@ -162,6 +162,7 @@ let countryList = {
     "ZWD" : "ZW"
 }
 
+//variable declarations
 var dDM = document.querySelectorAll("form select");
 var fromValue = document.querySelector(".from select");
 var toValue = document.querySelector(".to select");
@@ -169,74 +170,43 @@ var converterButton = document.querySelector("form button");
 var exchangeRateTxt = document.querySelector(".exchange-rate");
 var amount = document.querySelector("#amount");
 
-
+//loop that displays in console what currency is selected 
 for (let i = 0; i < dDM.length; i++) {
     dDM[i].addEventListener("change", function(e) {
         console.log("select", e.target.name);
         console.log("selected", e.target.value);
     });
-
-    // var selected = dDM[i].value;
-    // 
-    // for(let currency_code in countryList) {
-    //     let selected = i == 0 ? currency_code == "USD" : "selected" //: "" : currency_code == "EUR" ? "selected" : "";
-    //     let optionTag = `<option value="${currency_code}" ${selected}>${currency code}</option>`;
-    //     dDM[i].insertAdjacentHTML('beforeend', optionTag);
-    // }
 }
 
+//loading
 window.addEventListener('load', ()=>{
     getExchangeRate();
 });
+
+//button click functionality 
 converterButton.addEventListener('click', e =>{
     e.preventDefault();
     getExchangeRate();
 });
 
+//function that gets exchange rate
 function getExchangeRate() {
     const curr1 = fromValue.value;
     const curr2 = toValue.value;
     const curr3 = amount.value;
-
+    
+    //fetch data from API
     fetch(`https://v6.exchangerate-api.com/v6/c84d27efabb475a411031ee2/latest/${curr1}`)
     .then((result) => result.json())
     .then((data) => {
         //log data somehow
         const rate = data.conversion_rates[curr2];
         const convertedAmount = rate * curr3;
-        exchangeRateTxt.innerText =  `${curr3} ${curr1} = ${convertedAmount.toFixed(2)} ${curr2}`;
-
-
-        //let totalER = (amountVal * exchangeRate).toFixed(2);
+        exchangeRateTxt.innerText =  `${curr3} ${curr1} = ${convertedAmount.toFixed(2)} ${curr2}`;   
     });
 }
-// // function getExchangeRate(){
-// //     var amount = document.querySelector("form input");
 
-// //     var exchangeRateTxt = document.querySelector(".exchange-rate");
-    
-// //     let amountVal = amount.value;
-    
-// //     if(amountVal == "" || amountVal == "0"){
-// //         amount.value = "1";
-// //         amountVal = 1;
-// //     }
-// //     exchangeRateTxt.innerText = "Getting exchange rate...";
-// //     let url = `https://v6.exchangerate-api.com/v6/c84d27efabb475a411031ee2/latest/`;
-// //     fetch(url).then(response => response.json()).then(result =>{
-// //     let exchangeRate = result.conversion_rates[toValue.value];
-// //     let totalER = (amountVal * exchangeRate).toFixed(2);
-// //     exchangeRateTxt.innerText = `${toValue}`;
-// //     })
-    
-    
-// //     .catch(() => {
-// //         exchangeRateTxt.innerText = "An Error Occured";
-// //     });
-
-
-
-// }
+//css implementation
 tailwind.config = {
     theme: {
       extend: {
