@@ -21,16 +21,17 @@
     
     <!-- Homepage -->
     <nav class="">
-        <div class="flex flex-col justify-between bg-slate-800 rounded py-6">
-            <!--Website Logo-->
-            <section class="flex mb-5">
-                <div class="flex-end mb-2">
-                    <a href="/" class="text-center w-80 text-7xl md:text-7xl font-bold text-stone-100 p-4">
-                        CURR<span class="animate-pulse bg-clip-text text-transparent bg-gradient-to-l from-lime-600 via-yellow-300 to-red-600">EX</span>
-                <!--Navigation-->
+        <div class="flex flex-col justify-between shadow-lg bg-slate-800 bg-opacity-80 rounded py-6">
+            <!--Currex Design-->
+            <section class="flex mb-0">
+                <div class="flex-end mb-0">
+                    <a href="/" class="text-center w-80 text-8xl md:text-7xl font-bold text-stone-100 p-4">
+                        CURR<span class="motion-safe:animate-pulse bg-clip-text text-transparent bg-gradient-to-l from-lime-600 via-yellow-300 to-red-600">EX</span>
+                        <a id="Home"></a>
                     </a>
+                    <h3 class="text-stone-100 font-bold -text-left px-7">Exchange rates any time, any place.</h3>
                 </div>
-
+                <!--Navigation-->
                 <div class="md:hidden flex items-center ml-auto mr-10">
                     <button class="outline-none menu-button">
                         <svg class="w-6 h-6 text-gray-500" x-show="! showMenu" fill="none" stroke-linecap="round"
@@ -51,10 +52,7 @@
                     class="py-2 px-2 text-stone-100 font-semibold hover:text-stone-100 transition duration-300">
                     Contact Us
                 </a>
-                <a href=""
-                    class="py-2 px-2 text-stone-100 font-semibold hover:text-stone-100 transition duration-300">
-                    CryptEX 
-                </a>
+
                 </div>
             </section>
 
@@ -63,7 +61,7 @@
                     <ul class="flex gap-10">
                         <li> 
                             <a href=""
-                            class="block.text-sm px-2 py-4 text-stone-100 hover:bg-stone-500 hover:rounded font-semibold">
+                            class="block.text-sm px-2 py-4 text-stone-100 hover:bg-stone-500 hover:rounded">
                             Home
                         </li>
                         <li>
@@ -76,11 +74,6 @@
                             <a href="#Contact Us"
                             class="block.text-sm.px-2.py-4 text-stone-100 hover:bg-stone-500 hover:rounded transition duration-300">
                             Contact Us
-                        </li>
-                        <li>
-                            <a href="#CryptEX"
-                            class="block.text-sm.px-2.px-4 text-stone-100 hover:bg-stone-500 hover:rounded transition duration-300"></a>
-                            CryptEX
                         </li>
                     </ul>
                 </div>
@@ -95,11 +88,6 @@
             </script>
         </div>
     </nav>
-
-    <!-- Motto section -->
-    <section class="flex flex-col mb-5 p-5 mx-auto">
-        <i class="text-2xl font-bold text-center text-slate-000 bg-slate-200 rounded-full px-5">exchange rates; any place; any time</i>
-    </section>
     
     <!-- Exchange Tool section -->
     <main class="flex flex-col mb-5 p-5 bg-slate-800 bg-opacity-80 rounded w-5/6 md:w-3/6 mx-auto my-auto">
@@ -109,7 +97,12 @@
                 <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
                 </svg>
-                Convert</a>
+                Convert
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
+                </svg>
+            </a>
         </section>
 
         <form id='form' class="flex flex-col flex-wrap gap-10 text-xl text-emerald-400 content-center items-center md:flex-row md:text-base md:justify-center">
@@ -459,16 +452,25 @@
         </section>
     </main>
 
+    <!--About Section-->
+    <section class="flex flex-col p-5 bg-slate-800 bg-opacity-80 border-t rounded w-full mt-auto">
+        <h2 id=About class="text-5xl font-bold text-center text-yellow-400 mb-5">-About-</h2>
+        <h3 class="text-2xl font-bold text-center text-stone-100">In early 2022, three young developers found the need to create an on-demand currency converter. 
+            The need arose from the developers having family overseas in different places and wanting to be able to send and recieve money to and from their family that are scattered all around the globe. 
+             Currex quickly became the answer to their problems. In a few short seconds, you are able to quickly convert most currencys into whichever currencys you need while delivering graphs displaying on demand exchange rates.
+         </h3>
+    </section>
+
     <!-- Contact Section -->
-    <section class="flex flex-col p-5 bg-slate-800 border-t rounded w-full mt-auto">
-        <h2 class="text-5xl font-bold text-center text-yellow-400 mb-5">Contact</h2>
-        <div class="text-2xl font-bold text-stone-100">
-            <div class="flex-end flex justify-between">
-                <a href="https://github.com/joseph0edwards">Joseph Edwards</a>
-                <a href="https://github.com/Michael-Tulmen">Michael Tulmen</a>
-                <a href="https://github.com/VMLujanJr">Victor Lujan</a>
-            </div>
-        </div>
+    <section class="flex flex-col p-5 bg-slate-800 bg-opacity-80 border-t rounded w-full mt-auto">
+        <h2 id=Contact class="text-5xl font-bold text-center text-yellow-400 mb-5">-Contact-</h2>
+            <div class="text-2xl font-bold text-stone-100">
+                <div class="flex-end flex justify-between">
+                    <a href="https://github.com/joseph0edwards">Joseph Edwards</a>
+                    <a href="https://github.com/Michael-Tulmen">Michael Tulmen</a>
+                    <a href="https://github.com/VMLujanJr">Victor Lujan</a>
+                </div>
+            </div>  
     </section>
 </body>
 </html>
