@@ -20,7 +20,7 @@ You may also visit our interactive [website](https://vmlujanjr.github.io/currex/
   - [Objectives](#objectives)
     - [**Additional Criteria**](#additional-criteria)
     - [**MOCK UP**](#mock-up)
-  - [Languages](#languages)
+  - [Technologies](#technologies)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Collaborators](#collaborators)
@@ -53,60 +53,63 @@ SO THAT I can send money to family overseas
 
 **Technical Acceptance: 25%**
 
-- [ ] Satisfies the following code requirements
-- [ ] Application uses at least two server-side APIs
-- [ ] Application doesn't use JS alerts, prompts, or confirms (uses modals instead)
-- [ ] Application uses a CSS framework other than Bootstrap
-- [ ] Application is interactive (accepts and responds to user input)
+- [x] Satisfies the following code requirements
+- [x] Application uses at least two server-side APIs
+- [x] Application doesn't use JS alerts, prompts, or confirms (uses modals instead)
+- [x] Application uses a CSS framework other than Bootstrap
+- [x] Application is interactive (accepts and responds to user input)
 
 **Concept: 10%**
 
-- [ ] Application should be a unique and novel idea
-- [ ] Your group should clearly and concisely articulate your project idea
+- [x] Application should be a unique and novel idea
+- [x] Your group should clearly and concisely articulate your project idea
 
 **Deployment: 20%**
 
-- [ ] Application deployed at live URL and loads with no errors
-- [ ] Application GitHub URL submitted
-- [ ] Portfolio at live URL submitted, featuring project
+- [x] Application deployed at live URL and loads with no errors
+- [x] Application GitHub URL submitted
+- [x] Portfolio at live URL submitted, featuring project
 
 **Repository Quality: 10%**
 
-- [ ] Repository has a unique name
-- [ ] Repository follows best practices for file structure and naming conventions
-- [ ] Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-- [ ] Repository contains multiple descriptive commit messages
-- [ ] Repository contains quality README.md with description, screenshots, link to deployed application
+- [x] Repository has a unique name
+- [x] Repository follows best practices for file structure and naming conventions
+- [x] Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+- [x] Repository contains multiple descriptive commit messages
+- [x] Repository contains quality README.md with description, screenshots, link to deployed application
 
 **Application Quality: 15%**
 
-- [ ] Application user experience is intuitive and easy to navigate
-- [ ] Application user interface style is clean and polished
-- [ ] Application is responsive
+- [x] Application user experience is intuitive and easy to navigate
+- [x] Application user interface style is clean and polished
+- [x] Application is responsive
 
 **Presentation: 10%**
 
-- [ ] Your group should present using Powerpoint or a similar presentation software
-- [ ] Every group member should speak during the presentation
-- [ ] Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit#slide=id.p)
+- [x] Your group should present using Powerpoint or a similar presentation software
+- [x] Every group member should speak during the presentation
+- [x] Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit#slide=id.p)
 
 **Collaboration: 10%**
 
-- [ ] There are no major disparities in the number of GitHub contributions between group members
+- [x] There are no major disparities in the number of GitHub contributions between group members
 
 ### **MOCK UP**
 
 ![a mock-up of currex](./assets/images/mock-up.gif)
 
-## Languages
+## Technologies
 
 A list of languages used for this project:
 
+Languages
 - HTML
 - CSS
 - JavaScript
-- (Which libraries are we using?)
-- (Add those libraries here)
+
+Frameworks
+- 
+- 
 
 ## Installation
 
