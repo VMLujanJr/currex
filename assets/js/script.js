@@ -206,6 +206,10 @@ function getExchangeRate() {
     });
 }
 
+$.getJSON("https://api.countapi.xyz/hit/https://vmlujanjr.github.io/currex/visits", function(response) {
+    $("#visits").text(response.value);
+});
+
 //css implementation
 tailwind.config = {
     theme: {
