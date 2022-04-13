@@ -100,16 +100,21 @@ SO THAT I can send money to family overseas
 
 ## Technologies
 
-A list of languages used for this project:
-
 Languages
 - HTML
 - CSS
 - JavaScript
+- Markdown
 
 Frameworks
-- 
-- 
+- Tailwind CSS
+- jQuery
+
+APIs
+- exchangerateapi
+
+Repository
+- GitHub
 
 ## Installation
 
