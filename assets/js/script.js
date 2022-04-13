@@ -206,7 +206,7 @@ function getExchangeRate() {
     });
 }
 
-$.getJSON("https://api.countapi.xyz/hit/https://vmlujanjr.github.io/currex/visits", function(response) {
+$.getJSON("https://api.countapi.xyz/hit/vmlujanjr.github.io/currex/visits", function(response) {
     $("#visits").text(response.value);
 });
 
