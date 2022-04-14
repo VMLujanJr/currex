@@ -206,6 +206,31 @@ function getExchangeRate() {
     });
 }
 
+<<<<<<< HEAD
+=======
+const btc = document.getElementById("bitcoin");
+const ltc = document.getElementById("litecoin");
+const eth = document.getElementById("ethereum");
+
+const liveprice = {
+    "async": true,
+    "scroosDomain": true,
+    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Clitecoin%2Cethereum&vs_currencies=USD",
+
+    "method": "GET",
+    "headers": {}
+}
+$.ajax(liveprice).done(function(response) {
+    btc.innerHTML = response.bitcoin.usd;
+    ltc.innerHTML = response.litecoin.usd;
+    eth.innerHTML = response.ethereum.usd;
+});
+
+$.getJSON("https://api.countapi.xyz/hit/https://vmlujanjr.github.io/currex/visits", function(response) {
+    $("#visits").text(response.value);
+});
+
+>>>>>>> bb83efde155bf0f7f70a9eeba3bc463e7464d35e
 //css implementation
 tailwind.config = {
     theme: {
